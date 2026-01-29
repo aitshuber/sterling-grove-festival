@@ -1,0 +1,125 @@
+ <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/wow.min.js"></script>
+<script src="/assets/js/jquery.isotope.min.js"></script>
+<script src="/assets/js/easing.js"></script>
+<script src="/assets/js/lenis.js"></script>
+<script src="/assets/js/owl.carousel.js"></script>
+<script src="/assets/js/jquery.magnific-popup.min.js"></script>
+<script src="/assets/js/enquire.min.js"></script>
+<script src="/assets/js/jquery.plugin.js"></script>
+<script src="/assets/js/jquery.countTo.js"></script>
+<script src="/assets/js/jquery.countdown.js"></script>
+<script src="/assets/js/jquery.lazy.min.js"></script>
+<script src="/assets/js/jquery.lazy.plugins.min.js"></script>
+<script src="/assets/js/mdb.min.js"></script>
+<script src="/assets/js/jquery.countdown.js"></script>
+<script src="/assets/js/countdown-custom.js"></script>
+<script src="/assets/js/cookit.js"></script>
+<script src="/assets/js/designesia.js"></script>
+
+<!-- Facebook Pixel (2s after window load) -->
+<script>
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      try {
+        // Stub fbq (same behavior Meta expects)
+        if (!window.fbq) {
+          var fbq = function () {
+            fbq.callMethod ? fbq.callMethod.apply(fbq, arguments) : fbq.queue.push(arguments);
+          };
+          fbq.queue = [];
+          fbq.version = '2.0';
+          fbq.loaded = true;
+          window.fbq = fbq;
+          window._fbq = fbq;
+        }
+
+        // Inject script safely
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://connect.facebook.net/en_US/fbevents.js';
+        (document.head || document.documentElement).appendChild(s);
+
+        // Track
+        window.fbq('init', '1264306011306093');
+        window.fbq('track', 'PageView');
+      } catch (e) {}
+    }, 2000);
+  });
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="/assets/https://www.facebook.com/tr?id=1264306011306093&ev=PageView&noscript=1" />
+</noscript>
+
+<script>
+  (function () {
+    var CLARITY_ID = "u874tbjv6n";
+    var loaded = false;
+
+    function appendScriptSafely(src, attrs) {
+      function doAppend() {
+        try {
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = src;
+
+          if (attrs) {
+            Object.keys(attrs).forEach(function (k) {
+              s.setAttribute(k, attrs[k]);
+            });
+          }
+
+          var target =
+            document.head ||
+            document.getElementsByTagName("head")[0] ||
+            document.body ||
+            document.documentElement;
+
+          if (!target || !target.appendChild) return;
+          target.appendChild(s);
+        } catch (e) {}
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", doAppend, { once: true });
+      } else {
+        doAppend();
+      }
+    }
+
+    function loadClarity() {
+      if (loaded) return;
+      loaded = true;
+
+      setTimeout(function () {
+        try {
+          window.clarity =
+            window.clarity ||
+            function () {
+              (window.clarity.q = window.clarity.q || []).push(arguments);
+            };
+
+          appendScriptSafely("https://www.clarity.ms/tag/" + CLARITY_ID, {
+            "data-clarity": "1",
+          });
+        } catch (e) {}
+      }, 3000);
+    }
+
+    ["scroll", "mousemove", "touchstart", "keydown"].forEach(function (evt) {
+      window.addEventListener(evt, loadClarity, { once: true, passive: true });
+    });
+  })();
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="/assets/https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '{{site.google_analytics}}');
+</script>

@@ -1,0 +1,15 @@
+<div class="styles">
+	{% for style in include.product.styles %}
+		<div class="style  {% unless forloop.first %}d-none{% endunless %}" data-item-id="{{ forloop.index }}">
+			<a href="{{ include.product.url }}" title="Ohh Snap Products">
+				<img src="{{ site.baseurl }}{{ style.image }}">
+			</a>
+		</div>
+	{% endfor %}
+
+	<div class="style-picker">
+		{% for style in include.product.styles %}
+			<div style="background-color: {{ style.color }}" data-item-id="{{ forloop.index }}"></div>
+		{% endfor %}
+	</div>
+</div>

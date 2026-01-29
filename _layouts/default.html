@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+{% include head.html %}
+</head>
+<body class="dark-scheme">
+  <div id="wrapper">
+  <div id="preloader">
+      <div class="preloader1"></div>
+  </div>
+    <!-- NAVBAR -->
+   {% include nav.html %}
+  <div class="no-bottom no-top" id="content">
+    {{ content }}
+  </div>
+    <!-- FOOTER -->
+    {% include footer.html %}
+    <!-- JAVASCRIPT -->
+    {% include scripts.html %}
+  </div>
+  </body>
+</html>

@@ -1,0 +1,403 @@
+---
+layout: default
+title: ""
+description: ""
+keywords: ""
+image: ""
+
+carousel:
+  indicators: true
+  slides:
+    - image: /assets/images/slider/1.jpg
+      heading: "The Biggest Music Event of the Year"
+      text: "The biggest music event in decades. Attended by more than 100 musicians from all over the world. Get your ticket now!"
+      button_text: "Explore"
+      button_link: "#section-artists"
+      active: true
+
+    - image: /assets/images/slider/2.jpg
+      heading: "Be a part of musical history"
+      text: "The biggest music event in decades. Attended by more than 100 musicians from all over the world. Get your ticket now!"
+      button_text: "Explore"
+      button_link: "#section-artists"
+      active: false
+
+event_date:
+  date: "Dec 23–28"
+  location: "Allegiant Stadium, Las Vegas, NV, United States"
+
+artists:
+  featured:
+    - name: "Kiss"
+      image: /assets/images/misc/featured-1.jpg
+    - name: "Guns n Roses"
+      image: /assets/images/misc/featured-2.jpg
+    - name: "Pearl Jam"
+      image: /assets/images/misc/featured-3.jpg
+
+  list:
+    - Halestorm
+    - Chevelle
+    - Joan Jett
+    - In This Moment
+    - The Hives
+    - Gojira
+    - The Distillers
+    - Action Bronson
+    - The Struts
+    - Refused
+    - Killswitch Engage
+    - Parkway Drive
+    - Beartooth
+    - Scars on Broadway
+    - Architects
+    - Tom Morrelo
+    - Avatar
+    - Bad Wolves
+
+schedule:
+  days:
+    - number: 1
+      date: "Dec 20, 2026"
+      background: /assets/images/background/t1.jpg
+      artists:
+        - Guns N Roses
+        - The Hives
+        - Gojira
+        - Joan Jett
+        - Action Bronson
+
+    - number: 2
+      date: "Dec 21, 2026"
+      background: /assets/images/background/t2.jpg
+      artists:
+        - Kiss
+        - The Distillers
+        - Halestorm
+        - Chevelle
+        - In This Moment
+
+    - number: 3
+      date: "Dec 22, 2026"
+      background: /assets/images/background/t3.jpg
+      artists:
+        - Pearl Jam
+        - Killswitch Engage
+        - The Struts
+        - Refused
+        - Parkway Drive
+
+    - number: 4
+      date: "Dec 23, 2026"
+      background: /assets/images/background/t4.jpg
+      artists:
+        - Guns N Roses
+        - Beartooth
+        - Scars on Broadway
+        - Architects
+        - Tom Morrelo
+
+    - number: 5
+      date: "Dec 24, 2026"
+      background: /assets/images/background/t5.jpg
+      artists:
+        - Kiss
+        - Pearl Jam
+        - Guns N Roses
+        - Avatar
+        - Bad Wolves
+
+tickets:
+  - name: "One-Day"
+    price: 49.89
+    features:
+      - "Ticket for one day"
+      - "Chance to win doorprize"
+      - "<s>Free official merchandise</s>"
+      - "<s>Free artist photo + signature</s>"
+      - "<s>Hotel Voucher</s>"
+
+  - name: "Three-Days"
+    price: 69.89
+    features:
+      - "Ticket for three days"
+      - "Chance to win doorprize"
+      - "Free official merchandise"
+      - "<s>Free artist photo + signature</s>"
+      - "<s>Hotel Voucher</s>"
+
+  - name: "All-Days"
+    price: 89.89
+    features:
+      - "Ticket for all days"
+      - "Chance to win doorprize"
+      - "Free official merchandise"
+      - "Free artist photo + signature"
+      - "Hotel Voucher"
+
+gallery:
+  images:
+    - /assets/images/gallery/1.jpg
+    - /assets/images/gallery/2.jpg
+    - /assets/images/gallery/3.jpg
+    - /assets/images/gallery/4.jpg
+    - /assets/images/gallery/5.jpg
+    - /assets/images/gallery/6.jpg
+
+sponsors:
+  logos:
+    - /assets/images/sponsors/logo-1.png
+    - /assets/images/sponsors/logo-2.png
+    - /assets/images/sponsors/logo-3.png
+    - /assets/images/sponsors/logo-4.png
+    - /assets/images/sponsors/logo-5.png
+    - /assets/images/sponsors/logo-6.png
+permalink: /
+---
+
+ <section id="de-carousel" class="no-top no-bottom carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+
+   {% if page.carousel.indicators %}
+   <ol class="carousel-indicators">
+     {% for slide in page.carousel.slides %}
+     <li data-mdb-target="#de-carousel"
+         data-mdb-slide-to="{{ forloop.index0 }}"
+         class="{% if slide.active %}active{% endif %}">
+     </li>
+     {% endfor %}
+   </ol>
+   {% endif %}
+
+   <div class="carousel-inner">
+
+     {% for slide in page.carousel.slides %}
+     <div class="carousel-item {% if slide.active %}active{% endif %}"
+          data-bgimage="url({{ slide.image }})">
+       <div class="mask">
+         <div class="d-flex justify-content-center align-items-center h-100">
+           <div class="container text-white text-center">
+             <div class="row">
+               <div class="col-md-6 offset-md-3">
+                 <h1 class="mb-3 wow fadeInUp">{{ slide.heading }}</h1>
+                 <p class="lead wow fadeInUp" data-wow-delay=".3s">{{ slide.text }}</p>
+                 <div class="spacer-10"></div>
+                 <a href="{{ slide.button_link }}" class="btn-main wow fadeInUp" data-wow-delay=".6s">
+                   {{ slide.button_text }}
+                 </a>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     {% endfor %}
+
+   </div>
+
+   <a class="carousel-control-prev" href="#de-carousel" role="button" data-mdb-slide="prev">
+     <span class="carousel-control-prev-icon"></span>
+   </a>
+   <a class="carousel-control-next" href="#de-carousel" role="button" data-mdb-slide="next">
+     <span class="carousel-control-next-icon"></span>
+   </a>
+
+ </section>
+<section id="section-date">
+   <div class="container">
+     <div class="row g-custom-x align-items-center">
+       <div class="col-lg-12">
+         <div class="text-center">
+           <h2 class="wow fadeInUp">{{ page.event_date.date }}</h2>
+           <h3 class="wow fadeInUp"><span class="id-color">{{ page.event_date.location }}</span></h3>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+<section id="section-artists">
+   <div class="container">
+     <div class="row g-custom-x align-items-center">
+       <div class="col-lg-12 text-center">
+         <div class="wm wow slideInUp">Artists</div>
+         <h2 class="wow fadeInUp"><span class="id-color">01</span> Artists</h2>
+         <div class="small-border bg-color-2"></div>
+         <div class="spacer-single"></div>
+       </div>
+
+       {% for artist in page.artists.featured %}
+       <div class="col-md-4">
+         <div class="de-image-text s2 wow fadeInDown">
+           <a href="#" class="d-text"><h3>{{ artist.name }}</h3></a>
+           <img src="{{ artist.image }}" class="img-fluid" alt="">
+         </div>
+       </div>
+       {% endfor %}
+     </div>
+
+     <div class="row">
+       <div class="col-md-10 offset-md-1 text-center">
+         <ul class="list-inline-style-1">
+           {% for name in page.artists.list %}
+           <li>{{ name }}</li>
+           {% endfor %}
+         </ul>
+       </div>
+     </div>
+   </div>
+ </section>
+<section id="section-schedule" aria-label="section-services-tab">
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-lg-12 text-center">
+         <div class="wm wow slideInUp">Schedule</div>
+         <h2 class="wow fadeInUp"><span class="id-color">02</span> Schedule</h2>
+         <div class="small-border bg-color wow zoomIn"></div>
+       </div>
+
+       <div class="col-md-12">
+         <div class="de_tab tab_style_4 text-center">
+
+           <ul class="de_nav de_nav_dark">
+             {% for day in page.schedule.days %}
+             <li class="{% if forloop.first %}active{% endif %}" data-link="#section-services-tab">
+               <h3>Day <span>{{ '%02d' | format: day.number }}</span></h3>
+               <h4>{{ day.date }}</h4>
+             </li>
+             {% endfor %}
+           </ul>
+
+           <div class="de_tab_content text-left">
+
+             {% for day in page.schedule.days %}
+             <div id="tab{{ day.number }}" class="tab_single_content"
+                  data-bgimage="url({{ day.background }}) top">
+               <div class="row">
+                 <div class="col-md-12 text-center">
+                   <ul class="list-boxed-s1">
+                     {% for artist in day.artists %}
+                     <li><h3>{{ artist }}</h3><span></span></li>
+                     {% endfor %}
+                   </ul>
+                 </div>
+               </div>
+             </div>
+             {% endfor %}
+
+           </div>
+
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+<section id="section-tickets">
+   <div class="container">
+
+     <div class="row">
+       <div class="col-md-12 text-center">
+         <div class="wm wow slideInUp">Tickets</div>
+         <h2 class="wow fadeInUp"><span class="id-color">03</span> Tickets</h2>
+         <div class="small-border bg-color wow zoomIn"></div>
+       </div>
+     </div>
+
+     <div class="row g-custom-x">
+       {% for ticket in page.tickets %}
+       <div class="col-lg-4 col-md-6">
+         <div class="pricing-s1 wow fadeInDown">
+           <div class="top text-center"><h2>{{ ticket.name }}</h2></div>
+
+           <div class="mid text-center bg-color-secondary text-light">
+             <p class="price">
+               <span class="currency">$</span>
+               <span class="m opt-1">{{ ticket.price }}</span>
+             </p>
+           </div>
+
+           <div class="bottom">
+             <ul>
+               {% for f in ticket.features %}
+               <li>{{ f | markdownify }}</li>
+               {% endfor %}
+             </ul>
+           </div>
+
+           <div class="action text-center">
+             <a href="#" class="btn-main">Buy Ticket</a>
+           </div>
+         </div>
+       </div>
+       {% endfor %}
+     </div>
+
+   </div>
+ </section>
+<section id="section-gallery">
+   <div class="container">
+
+     <div class="row text-center">
+       <div class="col-md-12">
+         <div class="wm wow slideInUp">Gallery</div>
+         <h2 class="wow fadeInUp"><span class="id-color">04</span> Gallery</h2>
+         <div class="small-border bg-color wow zoomIn"></div>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="col-md-8 offset-md-2">
+
+         <div id="carouselExampleIndicators" class="carousel slide carousel-fade wow fadeInDown">
+
+           <div class="carousel-inner mb-5">
+             {% for img in page.gallery.images %}
+             <div class="carousel-item {% if forloop.first %}active{% endif %}">
+               <img src="{{ img }}" class="d-block w-100" alt="">
+             </div>
+             {% endfor %}
+           </div>
+
+           <!-- Controls -->
+           <button class="carousel-control-prev" type="button" data-mdb-slide="prev">
+             <span class="carousel-control-prev-icon"></span>
+           </button>
+
+           <button class="carousel-control-next" type="button" data-mdb-slide="next">
+             <span class="carousel-control-next-icon"></span>
+           </button>
+
+           <!-- Thumbnails -->
+           <div class="carousel-indicators" style="margin-bottom:-20px;">
+             {% for img in page.gallery.images %}
+             <button type="button" data-mdb-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}">
+               <img src="{{ img }}" class="d-block w-100 img-fluid" />
+             </button>
+             {% endfor %}
+           </div>
+
+         </div>
+
+       </div>
+     </div>
+
+   </div>
+ </section>
+<section>
+   <div class="container">
+     <div class="row text-center">
+       <div class="col-md-12">
+         <div class="wm wow slideInUp">Sponsors</div>
+         <h2 class="wow fadeInUp"><span class="id-color">05</span> Sponsored by:</h2>
+         <div class="small-border bg-color wow zoomIn"></div>
+       </div>
+     </div>
+
+     <div class="row g-custom-x">
+       {% for logo in page.sponsors.logos %}
+       <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
+         <img src="{{ logo }}" class="img-fluid" alt="">
+       </div>
+       {% endfor %}
+     </div>
+
+   </div>
+ </section>
