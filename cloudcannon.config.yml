@@ -39,35 +39,6 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
-  wedding:
-    path:
-    glob:
-    name:
-    singular_name:
-    icon: church
-    output: false
-    url:
-    filter:
-    parse_branch_index:
-    documentation:
-    description: ''
-    preview:
-    sort:
-    sort_options:
-    singular_key:
-    _editables:
-    _enabled_editors:
-    _inputs:
-    _select_data:
-    _structures:
-    add_options:
-    create:
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-    new_preview_url:
-    schemas:
-    schema_key:
   products:
     path: _products
     icon: shopping_cart
@@ -102,68 +73,6 @@ collections_config:
       - visual
       - content
       - data
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  booths:
-    path: _booths
-    name: Photo Booths
-    singular_name:
-    icon: camera_alt
-    output: true
-    description: List of Photo Booth
-    _editables:
-      block:
-      options:
-        allow_custom_markup: false
-        remove_custom_markup: false
-        image_size_attributes: true
-        styles: assets/css/theme.bundle.css
-      text:
-        allow_custom_markup: true
-        remove_custom_markup: false
-        bold: true
-        copyformatting:
-        italic: true
-        link: true
-        paths:
-        redo:
-        removeformat:
-        strike:
-        subscript:
-        superscript:
-        underline:
-        undo:
-    _enabled_editors:
-      - visual
-      - content
-      - data
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
-  event_type:
-    path: _event_type
-    name: Event Type
-    icon: event_seat
-    output: true
-    description: ''
-    _editables:
-      text:
-        allow_custom_markup: true
-        remove_custom_markup: false
-        bold: true
-        copyformatting: false
-        italic: true
-        link: true
-        paths:
-        redo:
-        removeformat:
-        strike:
-        subscript:
-        superscript:
-        underline:
-        undo:
-    _enabled_editors:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
