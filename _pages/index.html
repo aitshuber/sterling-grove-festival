@@ -18,49 +18,62 @@ carousel:
 event_date:
   date: "March 20–21"
   location: "Sterling Grove Historic District – Lafayette, Louisiana"
-
+  description: "Sterling grove cajun, creole and motown festival & national historic home tour"
 artists:
   featured: []
-  list: []
+  list:
+    - Steve Riley & the Mamou Playboys
+    - Jourdan Thibodeaux et les Rôdailleurs
+    - Julian Primeaux
+    - Ruben Moreno
+    - CC Adcock & the Lafayette Marquis
+    - LVVRS
+    - Honest to Bob (David Greely, Paul Anastasio, Daniel Coolik)
+    - Chère Élise Trio
+    - Major Handy
+    - Michael Juan Nunez and The Blues Orchestra
+    - Chubby Carrier
+    - 4 Horses
+    - Rusty Metoyer
+    - Bonsoir Catin
+    - Geno Delafose
 
 schedule:
   days:
-    - number: 1
-      date: "Friday, March 20"
-      background: /assets/images/background/t1.jpg
-      artists:
-        - "Nickerson Stage"
-        - "6p–7:15p Steve Riley & the Mamou Playboys"
-        - "7:45p–9p Jourdan Thibodeaux et les Rôdailleurs"
+    - date: "Friday, March 20"
+      background: /assets/images/636488549344129099-24316820938-bb3de54552-o.webp
+      stages:
+        - name: "Nickerson Stage"
+          performances:
+            - "6:00p–7:15p — Steve Riley & the Mamou Playboys"
+            - "7:45p–9:00p — Jourdan Thibodeaux et les Rôdailleurs"
 
-    - number: 2
-      date: "Saturday, March 21"
-      background: /assets/images/background/t2.jpg
-      artists:
-        - "Nickerson Stage"
-        - "1p–2:30p Julian Primeaux"
-        - "3p–4:30p Ruben Moreno"
-        - "5p–6:30p CC Adcock & the Lafayette Marquis"
-        - "7p–8:30p LVVRS"
+    - date: "Saturday, March 21"
+      background: /assets/images/636488549344129099-24316820938-bb3de54552-o.webp
+      stages:
+        - name: "Nickerson Stage"
+          performances:
+            - "1:00p–2:30p — Julian Primeaux"
+            - "3:00p–4:30p — Ruben Moreno"
+            - "5:00p–6:30p — CC Adcock & the Lafayette Marquis"
+            - "7:00p–8:30p — LVVRS"
 
-    - number: 3
-      date: "Saturday, March 21 — Givens Stage"
-      background: /assets/images/background/t3.jpg
-      artists:
-        - "12:30p–2p Honest to Bob (David Greely, Paul Anastasio, Daniel Coolik)"
-        - "2:30p–4p Chère Élise Trio"
-        - "4:30p–6p Major Handy"
-        - "6:30p–8p Michael Juan Nunez and The Blues Orchestra"
+        - name: "Givens Stage"
+          performances:
+            - "12:30p–2:00p — Honest to Bob (David Greely, Paul Anastasio, Daniel Coolik)"
+            - "2:30p–4:00p — Chère Élise Trio"
+            - "4:30p–6:00p — Major Handy"
+            - "6:30p–8:00p — Michael Juan Nunez and The Blues Orchestra"
 
-    - number: 4
-      date: "Saturday, March 21 — Mouton Stage"
-      background: /assets/images/background/t4.jpg
-      artists:
-        - "12p–1:30p Chubby Carrier"
-        - "2p–3:30p 4 Horses"
-        - "4p–5:30p Rusty Metoyer"
-        - "6p–7:30p Bonsoir Catin"
-        - "8p–9:30p Geno Delafose"
+        - name: "Mouton Stage"
+          performances:
+            - "12:00p–1:30p — Chubby Carrier"
+            - "2:00p–3:30p — 4 Horses"
+            - "4:00p–5:30p — Rusty Metoyer"
+            - "6:00p–7:30p — Bonsoir Catin"
+            - "8:00p–9:30p — Geno Delafose"
+
+
 
 tickets:
   - name: "Admission"
@@ -137,6 +150,7 @@ permalink: /
          <div class="text-center">
            <h2 class="wow fadeInUp">{{ page.event_date.date }}</h2>
            <h3 class="wow fadeInUp"><span class="id-color">{{ page.event_date.location }}</span></h3>
+           <p class="lead wow fadeInUp">{{page.event_date.description}}</p>
          </div>
        </div>
      </div>
@@ -151,22 +165,13 @@ permalink: /
          <div class="small-border bg-color-2"></div>
          <div class="spacer-single"></div>
        </div>
-
-       {% for artist in page.artists.featured %}
-       <div class="col-md-4">
-         <div class="de-image-text s2 wow fadeInDown">
-           <a href="#" class="d-text"><h3>{{ artist.name }}</h3></a>
-           <img src="{{ artist.image }}" class="img-fluid" alt="">
-         </div>
-       </div>
-       {% endfor %}
      </div>
 
      <div class="row">
        <div class="col-md-10 offset-md-1 text-center">
          <ul class="list-inline-style-1">
            {% for name in page.artists.list %}
-           <li>{{ name }}</li>
+           <li>{{ name }} | </li>
            {% endfor %}
          </ul>
        </div>
@@ -176,48 +181,62 @@ permalink: /
 <section id="section-schedule" aria-label="section-services-tab">
    <div class="container-fluid">
      <div class="row">
+
        <div class="col-lg-12 text-center">
          <div class="wm wow slideInUp">Schedule</div>
-         <h2 class="wow fadeInUp">Schedule</h2>
+         <h2 class="wow fadeInUp"> Schedule</h2>
          <div class="small-border bg-color wow zoomIn"></div>
        </div>
 
        <div class="col-md-12">
+
          <div class="de_tab tab_style_4 text-center">
 
+           <!-- TABS -->
            <ul class="de_nav de_nav_dark">
              {% for day in page.schedule.days %}
-             <li class="{% if forloop.first %}active{% endif %}" data-link="#section-services-tab">
-               <h3>Day <span>{{ '%02d' | format: day.number }}</span></h3>
-               <h4>{{ day.date }}</h4>
+             <li class="{% if forloop.first %}active{% endif %}">
+               <h3>{{ day.date }}</h3>
              </li>
              {% endfor %}
            </ul>
 
+           <!-- TAB CONTENT -->
            <div class="de_tab_content text-left">
 
              {% for day in page.schedule.days %}
-             <div id="tab{{ day.number }}" class="tab_single_content"
-                  data-bgimage="url({{ day.background }}) top">
-               <div class="row">
-                 <div class="col-md-12 text-center">
-                   <ul class="list-boxed-s1">
-                     {% for artist in day.artists %}
-                     <li><h3>{{ artist }}</h3><span></span></li>
-                     {% endfor %}
-                   </ul>
-                 </div>
+             <div
+               class="tab_single_content {% if forloop.first %}active{% endif %}"
+               data-bgimage="url({{ day.background }}) top"
+             >
+
+               {% for stage in day.stages %}
+               <div class="stage-block mb-4 text-center">
+
+                 <h3 class="stage-title">{{ stage.name }}</h3>
+
+                 <ul class="list-boxed-s1">
+                   {% for item in stage.performances %}
+                   <li><h4>{{ item }}</h4></li>
+                   {% endfor %}
+                 </ul>
+
                </div>
+               {% endfor %}
+
              </div>
              {% endfor %}
 
            </div>
 
          </div>
+
        </div>
      </div>
    </div>
  </section>
+
+
 <section id="section-tickets">
    <div class="container">
 
@@ -314,7 +333,7 @@ permalink: /
      <div class="row text-center">
        <div class="col-md-12">
          <div class="wm wow slideInUp">Sponsors</div>
-         <h2 class="wow fadeInUp">Sponsored by:</h2>
+         <h2 class="wow fadeInUp">Thank you to our Sponsors:</h2>
          <div class="small-border bg-color wow zoomIn"></div>
        </div>
      </div>

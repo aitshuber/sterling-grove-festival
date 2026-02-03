@@ -1178,7 +1178,7 @@ header.header-mobile {
     background: #fff;
     top: 0;
     height: 90px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
 
 header.header-mobile .container{
@@ -15887,11 +15887,16 @@ img {
     }
 
     .de_tab.tab_style_4 .de_nav li {
-        min-width: 33.3%;
-        width: 33.3%;
+        min-width: 50%;
+        width: 50%;
         border: none;
     }
-
+    #logo img{
+      height: 4em;
+    }
+    .carousel-item, #de-carousel {
+     height: 50vh !important;
+    }
     .de_tab.tab_style_4 .de_nav li:first-child,
     .de_tab.tab_style_4 .de_nav li:last-child {
         border-radius: 0;
