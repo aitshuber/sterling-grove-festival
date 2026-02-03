@@ -22,6 +22,6 @@
     "preserveOutput": true,
     "use_local_bundle": true,
     "enable_bundle_cache": true,
-    "config": "_config.yml,_config.prod.yml"
+    "config": "_config.yml"
   }
 }
