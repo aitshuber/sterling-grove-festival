@@ -39,15 +39,6 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
-  products:
-    path: _products
-    icon: shopping_cart
-    output: true
-    description: ''
-    _enabled_editors:
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
   vendors:
     path: _vendors
     icon: people
