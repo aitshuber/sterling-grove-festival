@@ -86,7 +86,26 @@ tickets:
 
 gallery:
   images:
-    - /assets/img/sterling-grove-poster.jpg
+    - /assets/images/gallery/IMG_1355.jpeg
+    - /assets/images/gallery/IMG_2992.JPEG
+    - /assets/images/gallery/IMG_2995.jpeg
+    - /assets/images/gallery/IMG_7542.jpeg
+    - /assets/images/gallery/IMG_7543.jpeg
+    - /assets/images/gallery/IMG_7546.jpeg
+    - /assets/images/gallery/IMG_7552.jpeg
+    - /assets/images/gallery/IMG_7560.jpeg
+    - /assets/images/gallery/IMG_7572.jpeg
+    - /assets/images/gallery/IMG_7580.jpeg
+    - /assets/images/gallery/IMG_7581.jpeg
+    - /assets/images/gallery/IMG_7583.jpeg
+    - /assets/images/gallery/IMG_9531.jpeg
+    - /assets/images/gallery/IMG_9533.jpeg
+    - /assets/images/gallery/IMG_9535.jpeg
+    - /assets/images/gallery/IMG_9536.jpeg
+    - /assets/images/gallery/IMG_9540.jpeg
+    - /assets/images/gallery/IMG_9546.jpeg
+    - /assets/images/gallery/IMG_9548.jpeg
+
 
 sponsors:
   logos: []
@@ -293,8 +312,11 @@ permalink: /
      <div class="row">
        <div class="col-md-8 offset-md-2">
 
-         <div id="carouselExampleIndicators" class="carousel slide carousel-fade wow fadeInDown">
+         <div id="carouselExampleIndicators"
+              class="carousel slide carousel-fade wow fadeInDown"
+              data-mdb-ride="carousel">
 
+           <!-- Slides -->
            <div class="carousel-inner mb-5">
              {% for img in page.gallery.images %}
              <div class="carousel-item {% if forloop.first %}active{% endif %}">
@@ -304,18 +326,25 @@ permalink: /
            </div>
 
            <!-- Controls -->
-           <button class="carousel-control-prev" type="button" data-mdb-slide="prev">
+           <button class="carousel-control-prev" type="button"
+                   data-mdb-target="#carouselExampleIndicators"
+                   data-mdb-slide="prev">
              <span class="carousel-control-prev-icon"></span>
            </button>
 
-           <button class="carousel-control-next" type="button" data-mdb-slide="next">
+           <button class="carousel-control-next" type="button"
+                   data-mdb-target="#carouselExampleIndicators"
+                   data-mdb-slide="next">
              <span class="carousel-control-next-icon"></span>
            </button>
 
            <!-- Thumbnails -->
            <div class="carousel-indicators" style="margin-bottom:-20px;">
              {% for img in page.gallery.images %}
-             <button type="button" data-mdb-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}">
+             <button type="button"
+                     data-mdb-target="#carouselExampleIndicators"
+                     data-mdb-slide-to="{{ forloop.index0 }}"
+                     class="{% if forloop.first %}active{% endif %}">
                <img src="{{ img }}" class="d-block w-100 img-fluid" />
              </button>
              {% endfor %}
@@ -328,6 +357,7 @@ permalink: /
 
    </div>
  </section>
+
 <section>
    <div class="container">
      <div class="row text-center">
