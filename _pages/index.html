@@ -16,9 +16,10 @@ carousel:
       active: true
 
 event_date:
-  date: "March 20–21"
+  date: "March 20th & 21st"
   location: "Sterling Grove Historic District – Lafayette, Louisiana"
-  description: "Sterling grove cajun, creole and motown festival & national historic home tour"
+  description: "A celebration of Cajun, Creole & Motown culture with live music and historic home tours."
+
 artists:
   featured: []
   list:
@@ -28,7 +29,7 @@ artists:
     - Ruben Moreno
     - CC Adcock & the Lafayette Marquis
     - LVVRS
-    - Honest to Bob (David Greely, Paul Anastasio, Daniel Coolik)
+    - Honest to Bob
     - Chère Élise Trio
     - Major Handy
     - Michael Juan Nunez and The Blues Orchestra
@@ -41,7 +42,7 @@ artists:
 schedule:
   days:
     - date: "Friday, March 20"
-      background: /assets/images/636488549344129099-24316820938-bb3de54552-o.webp
+      background: /assets/images/schedule.jpg
       stages:
         - name: "Nickerson Stage"
           performances:
@@ -49,7 +50,7 @@ schedule:
             - "7:45p–9:00p — Jourdan Thibodeaux et les Rôdailleurs"
 
     - date: "Saturday, March 21"
-      background: /assets/images/636488549344129099-24316820938-bb3de54552-o.webp
+      background: /assets/images/schedule.jpg
       stages:
         - name: "Nickerson Stage"
           performances:
@@ -73,16 +74,27 @@ schedule:
             - "6:00p–7:30p — Bonsoir Catin"
             - "8:00p–9:30p — Geno Delafose"
 
-
-
 tickets:
-  - name: "Admission"
-    price: 10
+  - name: "Friday Admission"
+    price: 15
     features:
-      - "Entry to all festival stages"
-      - "Access to National Historic Home Tour"
-      - "Family-friendly community event"
-      - "Local culture, food, and live performances"
+      - "Entry to all Friday performances"
+      - "Access to festival activities"
+      - "Family-friendly event"
+
+  - name: "Saturday Admission"
+    price: 20
+    features:
+      - "Entry to all Saturday performances"
+      - "Access to festival activities"
+      - "Family-friendly event"
+
+  - name: "Weekend Admission"
+    price: 30
+    features:
+      - "Access to all festival stages both days"
+      - "National Historic Home Tour included"
+      - "Support local culture, art, and music"
 
 gallery:
   images:
@@ -106,14 +118,11 @@ gallery:
     - /assets/images/gallery/IMG_9546.jpeg
     - /assets/images/gallery/IMG_9548.jpeg
 
-
 sponsors:
   logos: []
 
 permalink: /
 ---
-
-
  <section id="de-carousel" class="no-top no-bottom carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
 
    {% if page.carousel.indicators %}
@@ -224,30 +233,24 @@ permalink: /
            <div class="de_tab_content text-left">
 
              {% for day in page.schedule.days %}
-             <div
-               class="tab_single_content {% if forloop.first %}active{% endif %}"
-               data-bgimage="url({{ day.background }}) top"
-             >
+             <div class="tab_single_content py-4 {% if forloop.first %}active{% endif %}"
+               data-bgimage="url({{ day.background }}) top" style="">
 
                {% for stage in day.stages %}
                <div class="stage-block mb-4 text-center">
 
-                 <h3 class="stage-title">{{ stage.name }}</h3>
+                 <h2 class="stage-title mb-4 text-white">{{ stage.name }}</h2>
 
                  <ul class="list-boxed-s1">
                    {% for item in stage.performances %}
-                   <li><h4>{{ item }}</h4></li>
+                   <li><h4 class="fs-5 fw-semibold">{{ item }}</h4></li>
                    {% endfor %}
                  </ul>
-
                </div>
                {% endfor %}
-
              </div>
              {% endfor %}
-
            </div>
-
          </div>
 
        </div>
@@ -368,13 +371,22 @@ permalink: /
        </div>
      </div>
 
-     <div class="row g-custom-x">
-       {% for logo in page.sponsors.logos %}
-       <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
-         <img src="{{ logo }}" class="img-fluid" alt="">
+     {% if page.sponsors.logos and page.sponsors.logos.size > 0 %}
+       <div class="row g-custom-x">
+         {% for logo in page.sponsors.logos %}
+         <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
+           <img src="{{ logo }}" class="img-fluid" alt="">
+         </div>
+         {% endfor %}
        </div>
-       {% endfor %}
-     </div>
+     {% else %}
+       <div class="row">
+         <div class="col-md-12 text-center py-4">
+           <p class="lead">Sponsors coming soon.</p>
+         </div>
+       </div>
+     {% endif %}
 
    </div>
  </section>
+
