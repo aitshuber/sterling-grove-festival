@@ -1,6 +1,6 @@
 ---
 layout: bloglayout
-title: Festival History
+title: History of Lafayette and Acadiana
 description: ''
 keywords: ''
 author:
@@ -8,7 +8,7 @@ categories:
   - Blog
 tags:
   - blog
-image: /assets/images/gallery/IMG_9548.jpeg
+image: /assets/images/gallery/IMG_7542.jpeg
 ---
 Quis sunt quis do laboris eiusmod in sint dolore sit pariatur consequat commodo aliqua nulla ad dolor aliquip incididunt voluptate est aliquip adipisicing ea cupidatat nostrud incididunt aliquip dolore. Sed minim nisi duis laborum est labore nisi amet elit adipisicing proident do consectetur dolor labore sit nisi ad proident esse ad velit nisi irure reprehenderit ut et dolor labore veniam quis.
 
