@@ -7,8 +7,34 @@
 
     <!-- NAVBAR -->
    {% include nav.html %}
+   <!-- section begin -->
+   <section id="subheader" class="text-light" data-bgimage="url({{page.image}}) bottom">
+           <div class="center-y relative text-center">
+               <div class="container">
+                   <div class="row">
 
+                       <div class="col-md-12 text-center">
+                           <h1>{{page.title}}</h1>
+                       </div>
+                       <div class="clearfix"></div>
+                   </div>
+               </div>
+           </div>
+   </section>
+   <!-- section close -->
+   <section aria-label="section">
+   <div class="container">
+       <div class="row">
+           <div class="col-md-8 mx-auto">
+               <div class="blog-read">
+                 <div class="post-text">
     {{ content }}
+                 </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   </section>
     <!-- FOOTER -->
     {% include footer.html %}
     <!-- JAVASCRIPT -->

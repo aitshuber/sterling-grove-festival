@@ -5,13 +5,14 @@
         <div class="row">
 
             <!-- CONTACT INFO -->
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="widget">
                     <h5>Contact Info</h5>
                     <address class="s1">
                         <span><i class="text-white fa fa-map-marker fa-lg"></i>515 S Sterling St, Lafayette, LA 70501</span>
                         <span><i class="text-white fa fa-phone fa-lg"></i>337-534-0204</span>
-                        <span><i class="text-white fa fa-envelope-o fa-lg"></i>
+                        <span>
+                            <i class="text-white fa fa-envelope-o fa-lg"></i>
                             <a href="mailto:hello@belleviehospitality.com">hello@belleviehospitality.com</a>
                         </span>
                     </address>
@@ -19,7 +20,7 @@
             </div>
 
             <!-- QUICK LINKS -->
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="widget">
                     <h5>Quick Links</h5>
                     <ul>
@@ -31,6 +32,21 @@
                 </div>
             </div>
 
+            <!-- LATEST BLOGS -->
+            <div class="col-md-4">
+                <div class="widget">
+                    <h5>Latest Blog</h5>
+                    <ul>
+                        {% for post in site.posts limit:3 %}
+                        <li>
+                            <a href="{{ post.url | relative_url }}">
+                                {{ post.title }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -54,8 +70,8 @@
 
                         <div class="de-flex-col">
                             <div class="social-icons">
-                                <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                                <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
+                                <a href="https://facebook.com/sterlinggrovefestival" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                                <a href="https://www.instagram.com/sterlinggrovefestival" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
                             </div>
                         </div>
 

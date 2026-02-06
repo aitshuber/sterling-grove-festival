@@ -292,7 +292,7 @@ permalink: /
            </div>
 
            <div class="action text-center">
-             <a href="#" class="btn-main">Buy Ticket</a>
+             <a href="https://feednseedlaf.ticketspice.com/sterling-grove-festival" target="_blank" class="btn-main">Buy Ticket</a>
            </div>
          </div>
        </div>
@@ -315,51 +315,88 @@ permalink: /
      <div class="row">
        <div class="col-md-8 offset-md-2">
 
-         <div id="carouselExampleIndicators"
-              class="carousel slide carousel-fade wow fadeInDown"
-              data-mdb-ride="carousel">
+         <!-- Carousel -->
+         <div id="carouselExampleIndicators" class="carousel slide carousel-fade wow fadeInDown" data-mdb-ride="carousel">
 
            <!-- Slides -->
            <div class="carousel-inner mb-5">
              {% for img in page.gallery.images %}
              <div class="carousel-item {% if forloop.first %}active{% endif %}">
-               <img src="{{ img }}" class="d-block w-100" alt="">
+               <a href="{{ img }}" class="image-popup">
+                 <img src="{{ img }}" class="d-block w-100 img-fluid" alt="">
+               </a>
              </div>
              {% endfor %}
            </div>
 
            <!-- Controls -->
-           <button class="carousel-control-prev" type="button"
-                   data-mdb-target="#carouselExampleIndicators"
-                   data-mdb-slide="prev">
+           <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide="prev">
              <span class="carousel-control-prev-icon"></span>
            </button>
 
-           <button class="carousel-control-next" type="button"
-                   data-mdb-target="#carouselExampleIndicators"
-                   data-mdb-slide="next">
+           <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide="next">
              <span class="carousel-control-next-icon"></span>
            </button>
 
            <!-- Thumbnails -->
            <div class="carousel-indicators" style="margin-bottom:-20px;">
              {% for img in page.gallery.images %}
-             <button type="button"
-                     data-mdb-target="#carouselExampleIndicators"
-                     data-mdb-slide-to="{{ forloop.index0 }}"
-                     class="{% if forloop.first %}active{% endif %}">
+             <button
+               type="button"
+               data-mdb-target="#carouselExampleIndicators"
+               data-mdb-slide-to="{{ forloop.index0 }}"
+               class="{% if forloop.first %}active{% endif %}"
+               style="width:100px;"
+             >
                <img src="{{ img }}" class="d-block w-100 img-fluid" />
              </button>
              {% endfor %}
            </div>
 
          </div>
-
+         <!-- /Carousel -->
        </div>
      </div>
 
    </div>
  </section>
+<section id="section-history">
+  <div class="container">
+    <div class="row g-custom-x align-items-center justify-content-center">
+      <div class="col-lg-12">
+        <div class="text-center">
+          <div class="title-box-outer wow flipInX">
+            <div class="title-box-inner wow flipInX" data-wow-delay=".2s">
+              <h2 class="wow fadeInUp" data-wow-delay=".2s">History</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% assign posts = site.posts | where_exp: "p", "p.published != false" | slice: 0, 3 %}
+
+      {% for post in posts %}
+      <div class="col-md-4 mb-sm-30">
+        <div class="de-image-text s2 wow flipInY">
+          <a href="{{ post.url | relative_url }}" class="d-text">
+            <div class="arrow_wrap" style="background-size: cover;">
+                <div class="arrow__up" style="background-size: cover;"></div>
+            </div>
+            <h3>{{ post.title }}</h3>
+          </a>
+
+          {% if post.image %}
+            <img src="{{ post.image | relative_url }}" class="img-fluid" alt="{{ post.title }}">
+          {% else %}
+            <img src="/assets/img/default.jpg" class="img-fluid" alt="{{ post.title }}">
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 
 <section>
    <div class="container">
