@@ -1,25 +1,28 @@
 ---
 layout: default
-title: "Sterling Grove Festival"
-description: "Sterling Grove Cajun, Creole, and Motown Festival & National Historic Home Tour"
-keywords: "Sterling Grove Festival, Cajun Festival, Creole Festival, Motown Festival, Lafayette Events, Louisiana Festivals"
-image: "/assets/img/sterling-grove-poster.jpg"
-
+title: Sterling Grove Festival
+description: >-
+  Sterling Grove Cajun, Creole, and Motown Festival & National Historic Home
+  Tour
+keywords: >-
+  Sterling Grove Festival, Cajun Festival, Creole Festival, Motown Festival,
+  Lafayette Events, Louisiana Festivals
+image: /assets/img/sterling-grove-poster.jpg
 carousel:
   indicators: true
   slides:
     - image: /assets/images/slider/1.jpg
-      heading: "Sterling Grove Festival"
-      text: "Cajun, Creole & Motown Festival and National Historic Home Tour"
-      button_text: "View Schedule"
-      button_link: "#section-schedule"
+      heading: Sterling Grove Festival
+      text: Cajun, Creole & Motown Festival and National Historic Home Tour
+      button_text: View Schedule
+      button_link: '#section-schedule'
       active: true
-
 event_date:
-  date: "March 20th & 21st"
-  location: "Sterling Grove Historic District – Lafayette, Louisiana"
-  description: "A celebration of Cajun, Creole & Motown culture with live music and historic home tours."
-
+  date: March 20th & 21st
+  location: Sterling Grove Historic District – Lafayette, Louisiana
+  description: >-
+    A celebration of Cajun, Creole & Motown culture with live music and historic
+    home tours.
 artists:
   featured: []
   list:
@@ -38,64 +41,63 @@ artists:
     - Rusty Metoyer
     - Bonsoir Catin
     - Geno Delafose
-
 schedule:
   days:
-    - date: "Friday, March 20"
+    - date: Friday, March 20
       background: /assets/images/schedule.jpg
       stages:
-        - name: "Nickerson Stage"
+        - name: Nickerson Stage
           performances:
-            - "6:00p–7:15p — Steve Riley & the Mamou Playboys"
-            - "7:45p–9:00p — Jourdan Thibodeaux et les Rôdailleurs"
-
-    - date: "Saturday, March 21"
+            - 6:00p–7:15p — Steve Riley & the Mamou Playboys
+            - 7:45p–9:00p — Jourdan Thibodeaux et les Rôdailleurs
+    - date: Saturday, March 21
       background: /assets/images/schedule.jpg
       stages:
-        - name: "Nickerson Stage"
+        - name: Nickerson Stage
           performances:
-            - "1:00p–2:30p — Julian Primeaux"
-            - "3:00p–4:30p — Ruben Moreno"
-            - "5:00p–6:30p — CC Adcock & the Lafayette Marquis"
-            - "7:00p–8:30p — LVVRS"
-
-        - name: "Givens Stage"
+            - 1:00p–2:30p — Julian Primeaux
+            - 3:00p–4:30p — Ruben Moreno
+            - 5:00p–6:30p — CC Adcock & the Lafayette Marquis
+            - 7:00p–8:30p — LVVRS
+        - name: Givens Stage
           performances:
-            - "12:30p–2:00p — Honest to Bob (David Greely, Paul Anastasio, Daniel Coolik)"
-            - "2:30p–4:00p — Chère Élise Trio"
-            - "4:30p–6:00p — Major Handy"
-            - "6:30p–8:00p — Michael Juan Nunez and The Blues Orchestra"
-
-        - name: "Mouton Stage"
+            - >-
+              12:30p–2:00p — Honest to Bob (David Greely, Paul Anastasio, Daniel
+              Coolik)
+            - 2:30p–4:00p — Chère Élise Trio
+            - 4:30p–6:00p — Major Handy
+            - 6:30p–8:00p — Michael Juan Nunez and The Blues Orchestra
+        - name: Mouton Stage
           performances:
-            - "12:00p–1:30p — Chubby Carrier"
-            - "2:00p–3:30p — 4 Horses"
-            - "4:00p–5:30p — Rusty Metoyer"
-            - "6:00p–7:30p — Bonsoir Catin"
-            - "8:00p–9:30p — Geno Delafose"
-
+            - 12:00p–1:30p — Chubby Carrier
+            - 2:00p–3:30p — 4 Horses
+            - 4:00p–5:30p — Rusty Metoyer
+            - 6:00p–7:30p — Bonsoir Catin
+            - 8:00p–9:30p — Geno Delafose
 tickets:
-  - name: "Friday Admission"
+  - name: Friday Admission
     price: 15
     features:
-      - "Entry to all Friday performances"
-      - "Access to festival activities"
-      - "Family-friendly event"
-
-  - name: "Saturday Admission"
+      - Entry to all Friday performances
+      - Access to festival activities
+      - Family-friendly event
+  - name: Saturday Admission
     price: 20
     features:
-      - "Entry to all Saturday performances"
-      - "Access to festival activities"
-      - "Family-friendly event"
-
-  - name: "Weekend Admission"
+      - Entry to all Saturday performances
+      - Access to festival activities
+      - Family-friendly event
+  - name: Weekend Admission
     price: 30
     features:
-      - "Access to all festival stages both days"
-      - "National Historic Home Tour included"
-      - "Support local culture, art, and music"
-
+      - Access to all festival stages both days
+      - Support local culture, art, and music
+  - name: National home tours
+    price: 25
+    features:
+      - 'Maison Mouton  '
+      - 'Givens House  '
+      - The John Nickerson House
 gallery:
   images:
     - /assets/images/gallery/IMG_1355.jpeg
@@ -117,20 +119,16 @@ gallery:
     - /assets/images/gallery/IMG_9540.jpeg
     - /assets/images/gallery/IMG_9546.jpeg
     - /assets/images/gallery/IMG_9548.jpeg
-
 sponsors:
   logos: []
-
 permalink: /
 ---
- <section id="de-carousel" class="no-top no-bottom carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+<section id="de-carousel" class="no-top no-bottom carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
 
    {% if page.carousel.indicators %}
    <ol class="carousel-indicators">
      {% for slide in page.carousel.slides %}
-     <li data-mdb-target="#de-carousel"
-         data-mdb-slide-to="{{ forloop.index0 }}"
-         class="{% if slide.active %}active{% endif %}">
+     <li data-mdb-target="#de-carousel" data-mdb-slide-to="{{ forloop.index0 }}" class="{% if slide.active %}active{% endif %}">
      </li>
      {% endfor %}
    </ol>
@@ -139,8 +137,7 @@ permalink: /
    <div class="carousel-inner">
 
      {% for slide in page.carousel.slides %}
-     <div class="carousel-item {% if slide.active %}active{% endif %}"
-          data-bgimage="url({{ slide.image }})">
+     <div class="carousel-item {% if slide.active %}active{% endif %}" data-bgimage="url({{ slide.image }})">
        <div class="mask">
          <div class="d-flex justify-content-center align-items-center h-100">
            <div class="container text-white text-center">
@@ -233,8 +230,7 @@ permalink: /
            <div class="de_tab_content text-left">
 
              {% for day in page.schedule.days %}
-             <div class="tab_single_content py-4 {% if forloop.first %}active{% endif %}"
-               data-bgimage="url({{ day.background }}) top" style="">
+             <div class="tab_single_content py-4 {% if forloop.first %}active{% endif %}" data-bgimage="url({{ day.background }}) top">
 
                {% for stage in day.stages %}
                <div class="stage-block mb-4 text-center">
@@ -323,7 +319,7 @@ permalink: /
              {% for img in page.gallery.images %}
              <div class="carousel-item {% if forloop.first %}active{% endif %}">
                <a href="{{ img }}" class="image-popup">
-                 <img src="{{ img }}" class="d-block w-100 img-fluid" alt="">
+                 <img src="{{ img }}" class="d-block w-100 img-fluid" alt="" />
                </a>
              </div>
              {% endfor %}
@@ -341,13 +337,7 @@ permalink: /
            <!-- Thumbnails -->
            <div class="carousel-indicators" style="margin-bottom:-20px;">
              {% for img in page.gallery.images %}
-             <button
-               type="button"
-               data-mdb-target="#carouselExampleIndicators"
-               data-mdb-slide-to="{{ forloop.index0 }}"
-               class="{% if forloop.first %}active{% endif %}"
-               style="width:100px;"
-             >
+             <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="{{ forloop.index0 }}" class="{% if forloop.first %}active{% endif %}" style="width:100px;">
                <img src="{{ img }}" class="d-block w-100 img-fluid" />
              </button>
              {% endfor %}
@@ -386,9 +376,9 @@ permalink: /
           </a>
 
           {% if post.image %}
-            <img src="{{ post.image | relative_url }}" class="img-fluid" alt="{{ post.title }}">
+            <img src="{{ post.image | relative_url }}" class="img-fluid" alt="{{ post.title }}" />
           {% else %}
-            <img src="/assets/img/default.jpg" class="img-fluid" alt="{{ post.title }}">
+            <img src="/assets/img/default.jpg" class="img-fluid" alt="{{ post.title }}" />
           {% endif %}
         </div>
       </div>
@@ -412,7 +402,7 @@ permalink: /
        <div class="row g-custom-x">
          {% for logo in page.sponsors.logos %}
          <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
-           <img src="{{ logo }}" class="img-fluid" alt="">
+           <img src="{{ logo }}" class="img-fluid" alt="" />
          </div>
          {% endfor %}
        </div>
