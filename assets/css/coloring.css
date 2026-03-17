@@ -151,7 +151,9 @@ body::-webkit-scrollbar-thumb
     background: var(--primary-color);
 }
 
-
+footer a:hover{
+  color: #f7e6cc
+}
 .id-color,
 #mainmenu li:hover>ul,
 .date-box .day,
