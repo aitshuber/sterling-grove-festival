@@ -123,7 +123,7 @@ _inputs:
     type: textarea
     cascade: true
   description:
-    type: textarea
+    type: html
     cascade: true
   portrait:
     type: image
