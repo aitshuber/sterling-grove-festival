@@ -402,9 +402,9 @@ permalink: /
 
      {% if page.sponsors.logos and page.sponsors.logos.size > 0 %}
        <div class="row g-custom-x">
-         {% for logo in page.sponsors.logos %}
+         {% for item in page.sponsors %}
          <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
-           <img src="{{ logo }}" class="img-fluid" alt="" />
+           <img src="{{ item.logo }}" class="img-fluid" alt="" />
          </div>
          {% endfor %}
        </div>
