@@ -115,6 +115,9 @@ _inputs:
   title:
     type: textarea
     cascade: true
+  logo:
+    type: image
+    cascade: true
   keywords:
     type: textarea
     cascade: true
