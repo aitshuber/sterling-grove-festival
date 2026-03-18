@@ -1,4 +1,3 @@
-_schema: _schema
 paths:
   uploads: uploads
   uploads_use_relative_path: false
@@ -30,7 +29,7 @@ collections_config:
     disable_add_folder: false
     disable_file_actions: false
   pages:
-    path: ''
+    path: _pages
     icon: wysiwyg
     output: true
     filter: strict
@@ -104,12 +103,14 @@ _inputs:
     type: multiselect
     options:
       allow_create: true
+      allow_empty: true
       empty_type: array
     cascade: true
   tags:
     type: multiselect
     options:
       allow_create: true
+      allow_empty: true
       empty_type: array
     cascade: true
   title:
@@ -147,6 +148,9 @@ _inputs:
     cascade: true
   page-image-3:
     type: image
+    cascade: true
+  date:
+    type: text
     cascade: true
 _select_data:
   social:
@@ -461,8 +465,7 @@ _snippets:
       language:
         type: select
         options:
-          value_key: value
-          text_key: name
+          allow_empty: true
           values:
             - value: abap
               name: SAP
@@ -748,6 +751,7 @@ _snippets:
               name: Xojo
             - value: yaml
               name: Yaml
+          value_key: value
         cascade: true
   _cc_jekyll_template:
     hidden: true
