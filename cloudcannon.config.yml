@@ -118,7 +118,7 @@ _inputs:
     cascade: true
   logo:
     type: image
-    cascade: true
+    cascade: false
   keywords:
     type: textarea
     cascade: true
