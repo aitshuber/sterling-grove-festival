@@ -77,6 +77,9 @@ schedule:
             - 4:00p–5:30p — Rusty Metoyer
             - 6:00p–7:30p — Bonsoir Catin
             - 8:00p–9:30p — Geno Delafose
+maps:
+  - image: uploads/image001.png
+  - image: uploads/image002.png
 tickets:
   - name: Friday Admission
     price: 15
@@ -395,7 +398,34 @@ permalink: /
 </section>
 {% endcomment %}
 
+<section>
+   <div class="container">
+     <div class="row text-center">
+       <div class="col-md-12">
+         <div class="wm wow slideInUp">Maps</div>
+         <h2 class="wow fadeInUp">Navigate The Festival</h2>
+         <div class="small-border bg-color wow zoomIn"></div>
+       </div>
+     </div>
 
+     {% if page.maps and page.maps.size > 0 %}
+       <div class="row justify-content-center">
+         {% for item in page.maps %}
+         <div class=" col-md-6 col-12 mb-sm-30">
+           <img src="{{ item.image }}" class="img-fluid" alt="" />
+         </div>
+         {% endfor %}
+       </div>
+     {% else %}
+       <div class="row">
+         <div class="col-md-12 text-center py-4">
+           <p class="lead"> coming soon.</p>
+         </div>
+       </div>
+     {% endif %}
+
+   </div>
+ </section>
 <section>
    <div class="container">
      <div class="row text-center">
@@ -407,7 +437,7 @@ permalink: /
      </div>
 
      {% if page.sponsors and page.sponsors.size > 0 %}
-       <div class="row g-custom-x">
+       <div class="row justify-content-center">
          {% for item in page.sponsors %}
          <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
            <img src="{{ item.logo }}" class="img-fluid" alt="" />
@@ -415,7 +445,7 @@ permalink: /
          {% endfor %}
        </div>
      {% else %}
-       <div class="row">
+       <div class="row justify-content-center">
          <div class="col-md-12 text-center py-4">
            <p class="lead">Sponsors coming soon.</p>
          </div>
