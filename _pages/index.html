@@ -22,7 +22,7 @@ event_date:
   location: Sterling Grove Historic District – Lafayette, Louisiana
   description: >-
     A celebration of Cajun, Creole &amp; Motown culture with live music and
-    historic home tours.  <strong>Feel free to bring your own chair    |  
+    historic home tours.  <strong>Feel free to bring your own chair    |
     </strong><strong>No Ice Chest   |  </strong><strong>Enjoy Great Food &amp;
     Drinks purchased on property    |   </strong><strong>Get your Festival
     T-shirts and Commemorative Poster at Ticket Booths</strong>
@@ -124,6 +124,7 @@ gallery:
     - /assets/images/gallery/IMG_9548.jpeg
 sponsors:
   - logo: /uploads/klfy-10-news-logo2017-2-1.png
+  - logo: /uploads/fhb-logo2-vert-fc-cmyk-1.jpg
 permalink: /
 ---
 <section id="de-carousel" class="no-top no-bottom carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
@@ -403,7 +404,7 @@ permalink: /
        </div>
      </div>
 
-     {% if page.sponsors.logos and page.sponsors.logos.size > 0 %}
+     {% if page.sponsors and page.sponsors.size > 0 %}
        <div class="row g-custom-x">
          {% for item in page.sponsors %}
          <div class="col-lg-2 col-md-4 col-6 mb-sm-30">
